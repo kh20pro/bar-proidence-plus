@@ -1,0 +1,106 @@
+:root{
+  --blue:#003366;
+  --yellow:#ffcc00;
+  --muted:#f4f4f4;
+  --danger:#cc3333;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, Arial, sans-serif;
+  background:var(--muted);
+  color:#222;
+}
+header{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  padding:14px 20px;
+  background:var(--blue);
+  color:white;
+}
+header .logo{
+  font-weight:700;
+  padding:8px 12px;
+  background:var(--yellow);
+  color:var(--blue);
+  border-radius:6px;
+}
+main{
+  display:flex;
+  gap:18px;
+  padding:18px;
+}
+.left, .right{
+  flex:1;
+  min-width:300px;
+}
+.card{
+  background:white;
+  padding:14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom:18px;
+}
+.product-form{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.product-form input, .product-form select{
+  padding:8px;
+  border:1px solid #ddd;
+  border-radius:6px;
+}
+.product-form button{
+  padding:8px 12px;
+  background:var(--blue);
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+.list{margin-top:8px}
+.list .item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px;
+  border-bottom:1px dashed #eee;
+}
+.catalogue{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.catalogue .btn{
+  padding:8px 10px;
+  background:#eee;
+  border-radius:6px;
+  cursor:pointer;
+}
+.summary{margin-top:12px;display:flex;flex-direction:column;gap:6px;padding-top:8px}
+.summary div{display:flex;justify-content:space-between}
+.total{font-weight:700;border-top:1px solid #eee;padding-top:8px;margin-top:6px}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.actions input{flex:1;padding:8px;border-radius:6px;border:1px solid #ddd}
+button.primary{background:var(--blue);color:white;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+button.secondary{background:white;border:1px solid var(--blue);color:var(--blue);padding:8px 12px;border-radius:6px;cursor:pointer}
+button.danger{background:var(--danger);color:white;padding:8px 12px;border-radius:6px;border:none;cursor:pointer}
+button{cursor:pointer}
+footer{text-align:center;padding:12px;margin-top:8px;color:#666}
+
+/* invoice preview */
+.invoice-preview .invoiceContent{
+  font-family:monospace;
+  background:#fafafa;padding:12px;border-radius:6px;border:1px dashed #eee;
+  max-height:360px;overflow:auto;
+}
+.invoice-preview h2{margin-top:0}
+
+/* responsive */
+@media (max-width:900px){
+  main{flex-direction:column}
+}
